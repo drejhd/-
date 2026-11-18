@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #3985d0, #e0f2fe);
+    display: flex;
+    justify-content: center;
+}
+
+.house-wrapper {
+    position: relative;
+    width: 360px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.house-base {
+    width: 260px;
+    height: 200px;
+    background: #e3c17d;
+    position: relative;
+    z-index: 2;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.05), inset 5px 5px 12px rgba(255, 255, 255, 0.6);
+    border: 2px solid #b5956e;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 150px solid #b34a3c;
+    position: relative;
+    z-index: 3;
+    margin-bottom: -16px;
+}
+
+.chimney {
+    width: 55px;
+    height: 120px;
+    background: #847a74;
+    position: absolute;
+    top: 40px;
+    left: 245px;
+    z-index: 2;
+    border: 2px solid #5f5e5d;
+    border-bottom: none;
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.15), inset 4px 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+.window {
+    width: 76px;
+    height: 76px;
+    background: #a0d0f0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    transform: translateX(-50%);
+    border: 5px solid #5a3e2b;
+    box-shadow: 0 0 0 3px #e6c8a0, inset 0 0 0 4px rgba(255, 255, 255, 0.7), inset 0 0 20px rgba(255, 255, 240, 0.8);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window::before,
+.window::after {
+    content: "";
+    position: absolute;
+    background: #5a3e2b;
+    border-radius: 2px;
+}
+
+.window::before {
+    width: 4px;
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.window::after {
+    width: 70px;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.door {
+    width: 62px;
+    height: 105px;
+    background: #8b5a2b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #5a3e2b;
+    border-bottom: none;
+    box-shadow: inset -3px -3px 8px rgba(0, 0, 0, 0.2), inset 3px 3px 10px rgba(255, 255, 255, 0.3);
+    z-index: 6;
+}
+
+/* Ручка двери */
+.door::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #ffd966;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 55px;
+}
+
+.ground {
+    position: absolute;
+    bottom: -18px;
+    left: -40px;
+    width: 440px;
+    height: 60px;
+    background: #7caf6b;
+    border-radius: 50% 50% / 100% 100% 0 0;
+}
